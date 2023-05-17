@@ -1,0 +1,117 @@
+<!-----CONTIENE TODO LO DE LA PAGINA INICIO----->
+<ion-content class="fondo">
+  <!-----HEADER QUE CONTIENE EL TITULO Y EL ICONO PARA ABRIR EL MENU----->
+  <ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar class="ion-no-border toolbar">
+      <ion-buttons slot="start">
+        <ion-menu-button class="menu-button"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center title">Reserve una estancia</ion-title>
+    </ion-toolbar>
+  </ion-header>  
+  
+    <!--------------------CONTIENE TODO LO QUE SE VE EN EL SLIDER MENU------------------------>
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <!----- TOOLBAR DEL MENU SLIDER --------->
+        <ion-toolbar>
+          <div align="center" *ngIf="info">
+            <h5 class="ion-text-capitalize">Bienvenido:</h5>
+            <h5 class="ion-text-capitalize">{{info.nombre}} {{info.apellido}}</h5>
+            <ion-button size="small" class="btn-editar" [routerLink]="['/actualizar']" >Actualizar Información</ion-button>
+          </div>
+        </ion-toolbar>
+        <!--------------------------------------->
+      </ion-header>
+  
+      <ion-content>
+        <ion-list>
+          <!----- BOTON DE LLAVE ELECTRONICA ----->
+          <ion-item [routerLink]="['/llave']">
+            <ion-icon class="icono-menu" icon="keypad"></ion-icon><p  class="texto-menu">Llave Electronica</p>
+          </ion-item>
+  
+          <!-----BOTON DE HISTORIAL DE RESERVAS----->
+          <ion-item [routerLink]="['/historial']">
+            <ion-icon class="icono-menu" icon="time"></ion-icon><p  class="texto-menu">Historial de Reservas</p> 
+          </ion-item>
+  
+           <!-----BOTON DE IR A LA UBICACION DEL HOTEL----->
+           <ion-item href="https://www.google.com/maps/search/?api=1&query=-33.014297,-71.556803&zoom=14">
+            <ion-icon class="icono-menu" icon="location"></ion-icon><p  class="texto-menu">Ubicación Hotel Serevena</p> 
+          </ion-item>
+  
+           <!-----BOTON DE LLAMAR AL SOPORTE----->
+           <ion-item href="tel:+56956249042">
+            <ion-icon class="icono-menu" icon="call"></ion-icon><p  class="texto-menu">Llamar a Soporte</p> 
+          </ion-item>
+           <!-----BOTON DE CERRAR SESION----->
+           <ion-item (click)="logout()">
+            <ion-icon class="icono-menu" icon="log-out"></ion-icon><p  class="texto-menu">Cerrar Sesión</p> 
+          </ion-item>
+        </ion-list>
+     </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+    <!--------------------------------------------------->
+  
+  
+    <!----------------------- ------------------------>
+    <img class="logo" src="assets/img/logo_small.png" alt="logo">
+    <!-----CARD QUE CONTIENE TODO LO DE LA PAGINA----->
+    <ion-card class="card">
+      
+      <!----------------- CAMPO DE FECHA INICIO ------------>
+      <h5 class="h5">Seleccione fechas:</h5>
+      <ion-item button="true" id="open-date-input" class="fechas">
+        <ion-label><ion-icon icon="calendar"></ion-icon> Fecha de Inicio</ion-label>
+        <ion-text slot="end">{{formattedString}}</ion-text>
+        <ion-popover trigger="open-date-input" show-backdrop="false">
+          <ng-template>
+            <ion-datetime
+            [min]="today"
+            #datetime 
+            presentation="date" 
+            (ionChange)="dateChanged(datetime.value)" 
+            (ionCancel)="showPicker = false">
+            <ion-buttons slot="buttons">
+              <ion-button (click)="Cancelar()">Cancelar</ion-button>
+              <ion-button (click)="Aceptar()">Aceptar</ion-button>
+            </ion-buttons>
+            </ion-datetime>
+          </ng-template>
+        </ion-popover>
+      </ion-item>
+      <!----------------------------------------------------------->
+          
+      <!----------------- CAMPO DE FECHA TERMINO ---------------->
+      <ion-item button="true" id="open-date-input-2" class="fechas">
+        <ion-label><ion-icon icon="calendar"></ion-icon> Fecha de Termino</ion-label>
+        <ion-text slot="end">{{formattedString2}}</ion-text>
+          <ion-popover trigger="open-date-input-2" show-backdrop="false">
+            <ng-template>
+              <ion-datetime
+              [min]="FechaMinima"
+              #datetime2
+              presentation="date"  
+              (ionChange)="dateChanged2(datetime2.value)" 
+              (ionCancel)="showPicker2 = false">
+              <ion-buttons slot="buttons">
+                <ion-button (click)="Cancelar()">Cancelar</ion-button>
+              <ion-button (click)="Aceptar()">Aceptar</ion-button>
+              </ion-buttons>
+              </ion-datetime>
+            </ng-template>
+          </ion-popover>
+      </ion-item>
+      <!------------------------------------------------------>
+      <br>
+  
+  
+      <!--------------------------BOTON DE VER HABITACIONES-------------------------->
+      <ion-button class="habitaciones" expand="block" (click)="habitaciones()">Ver Habitaciones</ion-button>
+    </ion-card>
+  </ion-content>
+  
+  
+  

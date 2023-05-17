@@ -1,0 +1,39 @@
+.toolbar{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: white; 
+    --background: #3a6186;
+    --background: -webkit-linear-gradient(to right, #89253e, #3a6186);
+    --background: linear-gradient(to right, #89253e, #3a6186); 
+}
+.icono{
+    padding-left: 4px;
+    color: white;
+}
+.title{
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+.fondo{
+    --background: #3a6186;
+    --background: -webkit-linear-gradient(to right, #89253e, #3a6186);
+    --background: linear-gradient(to right, #89253e, #3a6186); 
+}
+
+.card1{
+    color: white;
+    margin-top: 30px;
+    backdrop-filter: blur(25px) saturate(191%);
+    -webkit-backdrop-filter: blur(25px) saturate(191%);
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 12px;    
+}
+.qr{
+    height: 160px;
+}
+#map{
+    height: 50vh;
+    margin: 20px;
+    border: 1px solid black;
+}

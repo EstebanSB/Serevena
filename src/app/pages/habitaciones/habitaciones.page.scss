@@ -1,0 +1,59 @@
+//contiene el toolbar de la pagina
+.toolbar{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: black; 
+}
+//titulo dentro del toolbar
+.title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+//CARD DONDE SE ENCUENTRAN LAS FECHAS INGRESADAS POR EL CLIENTE
+//Y LA INFO DE LAS HABITACIONES
+.card{
+    margin-top: 10px;
+    color: white;
+    backdrop-filter: blur(25px) saturate(191%);
+    --background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    border-radius: 12px;
+}
+//TITULO DE FECHA DE INICIO
+.fechaIni{
+    color: white;
+    font-size: 18px;
+    margin-right: 5%;
+}
+//FOTOS DE LAS HABITACIONES
+.img{
+    width:100%;
+}
+//CARRUSEL DE FOTOS
+ion-slides{
+    --bullet-background-active: white;
+}
+//NOMBRE DE LAS HABITACIONES
+.titulo{
+    color: white;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+//CONTIENE LA INFORMACION DE LAS HABITACIONES
+ion-text ion-label{
+    color: rgb(202, 202, 202);
+    font-size: 16px;
+    padding-left: 10px;
+}
+//TITULOS DE LOS PRECIOS DE LAS HABITACIONES
+.precio{
+    color: white;
+    font-size: 18px;
+}
+//BOTON DE SELECCIONAR
+.seleccionar{
+    padding-left: 15%;
+    --background: linear-gradient( 135deg, #FF6FD8 10%, #3813C2 100%);
+}
+
+

@@ -1,0 +1,7 @@
+{
+  "name": "Serevena",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

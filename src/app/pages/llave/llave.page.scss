@@ -1,0 +1,38 @@
+.toolbar{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: black; 
+}
+.icono{
+    padding-left: 4px;
+    color: black;
+}
+.title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+.card1{
+    color: white;
+    margin-top: 5px;
+    backdrop-filter: blur(25px) saturate(191%);
+    border-radius: 12px;    
+    --background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+}
+.nombreHab{
+    font-size: 18px;
+}
+//BOTON DE MOSTRAR QR
+.mostrarQr{
+    margin-bottom: 10px;
+    --border-radius: 30px;
+        /* From https://css.glass */
+    --background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    font-size: 16px;
+}
+

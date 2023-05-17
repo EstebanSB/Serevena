@@ -1,0 +1,70 @@
+// CARD QUE CONTIENE EL HEADER Y EL BOTON DE HAMBURGUESA
+.toolbar{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    --background: transparent;
+}
+//ICONO DE MENU HAMBURGUESA
+.menu-button{
+    font-size: 30px;
+}
+//titulo de la pagina "reserva una estancia"
+.title{
+    font-size: 22px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+//TOOLBAR DEL MENU
+ion-toolbar{
+    --background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    color: white;
+    font-size: 15px;
+}
+//TITULO DE SELECCIONE FECHAS
+.h5{
+    color: ghostwhite;
+}
+//BOTON DE EDITAR PERFIL EN EL MENU SLIDER
+.btn-editar{
+    --background: transparent;
+    box-shadow: none;
+    border: 2px solid white;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+//ICONOS DEL MENU SLIDER
+.icono-menu{
+    color: black;
+    font-size: 20px;
+}
+//TEXTO DE LOS BOTONES DEL MENU SLDIER
+.texto-menu{
+    margin-left: 10px;
+}
+.fondo{
+    --background: url(./fondo-1.jpg) no-repeat center; 
+}
+//LOGO DE LA EMPRESA
+.logo{
+    margin-top: 15px;
+    width: 180px;
+	margin-left: 30%;
+/* 	fix the image within it's "frame" */
+	object-fit:cover;
+}
+//CARD QUE CONTIENE LOS CAMPOS DE FECHAS
+.card{
+    box-shadow: none;
+    --background: transparent;
+    color: #f1faee;
+}
+//CAMPOS DE FECHAS
+.fechas{
+    box-shadow: #06182c66 0px 0px 0px 2px, #06182ca6 0px 4px 6px -1px, #ffffff14 0px 1px 0px inset;
+}
+//BOTON DE VER HABITACIONES
+.habitaciones{
+    --border-radius: 30px;
+    --background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+

@@ -1,0 +1,29 @@
+.toolbar{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: black; 
+}
+.icono{
+    padding-left: 4px;
+}
+.title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+.card{
+    color: white;
+    backdrop-filter: blur(25px) saturate(191%);
+    border-radius: 12px;    
+    --background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+.room{
+    font-size: 18px;
+}
+
+ion-text{
+    color: white;
+}
+ion-label{
+    padding-bottom: 10px;
+}

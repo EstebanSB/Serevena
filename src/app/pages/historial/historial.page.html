@@ -1,0 +1,21 @@
+<!--------------- HEADER --------------->
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-icon [routerLink]="['/inicio']" size="large" name="chevron-back-outline" class="icono"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center title">Historial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <!----- CARDS CONTIENEN LA INFORMACION DEL HISTORIAL DE RESERVAS ----->
+  <div *ngFor="let reserva of reservaciones">
+    <ion-card class="ion-text-center card" *ngIf= "reserva.idCliente == ID; else sinId">
+        <h5 class="room">Nombre: {{reserva.nombreHabitacion}}</h5>
+        <h5 class="room">Llegada: {{reserva.fechaInicio}}</h5>
+        <h5 class="room">Salida: {{reserva.fechaTermino}}</h5>
+    </ion-card>
+  </div>
+  
+</ion-content>

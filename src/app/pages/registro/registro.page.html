@@ -1,0 +1,60 @@
+<ion-content>
+  <!-----CARD QUE CONTIENE TODOS LOS ELEMENTOS DEL REGISTRO----->
+  <ion-card class="card">
+    <ion-toolbar class="toolbar">
+      <ion-buttons slot="start">
+        <ion-icon [routerLink]="['/login']" size="large" name="chevron-back-outline" class="icono"></ion-icon>
+      </ion-buttons>
+      <ion-title class="ion-text-center title"><h3>Registrate para Comenzar!</h3></ion-title>
+    </ion-toolbar>
+    
+
+    <!-----CARD CONTENT QUE CONTIENE TODO LOS CAMPOS DE REGISTRO ----->
+    <ion-card-content class="ion-text-center">
+      <!-----CAMPO PARA INGRESAR EL NOMBRE EN EL REGISTRO----->
+      <ion-item class="input">
+          <ion-label position="stacked">
+              <ion-icon name="person"></ion-icon> Nombre</ion-label>
+              <ion-input [(ngModel)]="datos.nombre" type="text" placeholder="Ej: Juan" minlength="3"></ion-input>
+      </ion-item>
+
+      <!-----CAMPO PARA INGRESAR EL APELLIDO EN EL REGISTRO----->
+      <ion-item class="input">
+          <ion-label position="stacked">
+              <ion-icon name="person"></ion-icon> Apellido</ion-label>
+              <ion-input [(ngModel)]="datos.apellido" type="text" placeholder="Ej: Perez" minlength="3"></ion-input>
+      </ion-item>
+
+      <!-----CAMPO PARA INGRESAR EL CELULAR EN EL REGISTRO----->
+      <ion-item class="input">
+        <ion-label position="stacked">
+          <ion-icon name="call"></ion-icon> Celular</ion-label>
+          <ion-input [(ngModel)]="datos.celular" type="tel" placeholder="Ej: 123456789" pattern="[0-9]*" maxlength="9" ></ion-input>
+      </ion-item>
+
+      <!-----CAMPO PARA INGRESAR El CORREO EN EL REGISTRO----->
+      <ion-item class="input">
+        <ion-label position="stacked">
+          <ion-icon name="mail"></ion-icon> Correo</ion-label>
+          <ion-input [(ngModel)]="datos.correo" type="text" placeholder="Ej: JuanP@gmail.com"></ion-input>
+      </ion-item>
+
+      <!-----CAMPO PARA INGRESAR LA CONTRASEÑA EN EL REGISTRO----->
+      <ion-item class="input">
+        <ion-label position="stacked">
+          <ion-icon name="lock-closed"></ion-icon> Contraseña</ion-label>
+          <ion-input [(ngModel)]="datos.password" type="password" placeholder="Ej: 123456"></ion-input>
+      </ion-item>
+
+      <br>
+      <!-----BOTON DE REGISTRARSE----->
+      <ion-button (click)="registro()" class="registrarse">Registrarse</ion-button>
+
+      <br>
+      <!-----TITULO DE INICIA SESION----->
+      <p class="footer-text">¿Ya tienes una cuenta?, <a [routerLink]="['/login']" class="t1">Inicia Sesión</a></p>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

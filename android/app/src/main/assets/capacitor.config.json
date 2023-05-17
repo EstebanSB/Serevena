@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Serevena",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

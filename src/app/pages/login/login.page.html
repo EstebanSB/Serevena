@@ -1,0 +1,36 @@
+<ion-content>
+  <!-----CARD QUE CONTIENE TODOS LOS ELEMENTOS DEL LOGIN----->
+  <ion-card class="card">
+      <div class="ion-text-center">
+          <img class="logo" src="assets/img/logo.svg" alt="logo">
+          <h3>Inicia Sesión Para Comenzar!</h3>
+      </div>
+
+      <!-----CAMPO PARA INGRESAR EL CORREO EN EL LOGIN----->
+      <ion-card-content class="ion-text-center">
+          <ion-item class="input">
+              <ion-label position="floating">
+                  <ion-icon name="person"></ion-icon> Correo</ion-label>
+                  <ion-input type="text" [(ngModel)]="credenciales.correo"></ion-input>
+          </ion-item>
+          
+          <!-----CAMPO PARA INGRESAR LA CONTRASEÑA----->
+          <ion-item class="input">
+              <ion-label position="floating">
+                  <ion-icon name="lock-closed"></ion-icon> Contraseña</ion-label>
+                  <ion-input type="password" [(ngModel)]="credenciales.password"></ion-input>
+          </ion-item>
+          
+          <!-----TEXTO DE OLVIDASTE LA CONTRASEÑA----->
+          <ion-text class="ion-text-end">
+              <h4 [routerLink]="['/recuperar']" >¿Olvidaste la Contraseña?</h4>
+          </ion-text>
+          
+          <!-----BOTON DE INGRESAR----->
+          <ion-button (click)="ingresar()" class="ion-text-center entrar">Ingresar</ion-button>
+
+          <!-----TITULO DE REGISTRARSE----->
+          <p class="footer-text">¿Eres Nuevo?, <a [routerLink]="['/registro']" class="t1">Registrate</a></p>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

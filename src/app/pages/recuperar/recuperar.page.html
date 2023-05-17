@@ -1,0 +1,25 @@
+  <!--------------- HEADER --------------->
+  <ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar class="toolbar">
+      <ion-buttons slot="start">
+        <ion-icon [routerLink]="['/login']" size="large" name="chevron-back-outline" class="icono"></ion-icon>
+      </ion-buttons>
+      <ion-title class="ion-text-center title">¿Olvidaste tu Contraseña?</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="fondo">
+  <ion-card class="ion-text-center card1">
+    <h6>Ingresa el Email asociado a tu cuenta y te enviaremos unas instrucciones
+       para que puedas recuperarla
+    </h6>
+
+    <h6 class="correo">Email:</h6>
+    <ion-item class="email">
+      <ion-label></ion-label>
+        <ion-input placeholder="ejemplo@gmail.com" type="email" [(ngModel)]="userEmail.correo"></ion-input>
+    </ion-item>
+    <ion-button class="recuperar" expand="block" (click)="recuperar()">Recuperar</ion-button>
+
+  </ion-card> 
+</ion-content>

@@ -1,0 +1,43 @@
+<!--------------- HEADER --------------->
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-icon [routerLink]="['/inicio']" size="large" name="chevron-back-outline" class="icono"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center title">Actualizar Información</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!----- CARDS CONTIENEN LA INFORMACION DEL USUARIO LOGEADO PARA ACTUALIZAR SU INFORMACION ----->
+  <div *ngIf="userInfo">
+    <ion-card class="card">
+      <br>
+      <ion-item (click)="editarNombre()">
+        <ion-label>Nombre: {{userInfo.nombre}}</ion-label>
+        <ion-icon  slot="end" name="create"></ion-icon>
+      </ion-item>
+      <br>
+      <ion-item (click)="editarApellido()">
+        <ion-label>Apellido: {{userInfo.apellido}}</ion-label>
+        <ion-icon slot="end" name="create"></ion-icon>
+      </ion-item>
+      <br>
+      <ion-item (click)="editarCelular()">
+        <ion-label>Celular: {{userInfo.celular}}</ion-label>
+        <ion-icon slot="end" name="create"></ion-icon>
+      </ion-item>
+      <br>
+      <ion-item (click)="editarCorreo()">
+        <ion-label>Correo: {{userInfo.correo}}</ion-label>
+        <ion-icon slot="end" name="create"></ion-icon>
+      </ion-item>
+      <br>
+      <ion-item (click)="presentAlertConfirm()">
+        <ion-label>Actualizar Contraseña.</ion-label>
+        <ion-icon slot="end" name="create"></ion-icon>
+      </ion-item>
+      <br>
+    </ion-card>
+  </div>
+</ion-content>

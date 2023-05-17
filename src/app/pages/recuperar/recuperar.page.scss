@@ -1,0 +1,45 @@
+.toolbar{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: black; 
+}
+.icono{
+    padding-left: 4px;
+    color: black;
+}
+.title{
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+.card1{
+    margin-top: 10px;
+    background: transparent;
+    box-shadow: none;
+}
+.correo{
+    margin-right: 80%;
+}
+ion-card-title{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 800;
+}
+h6{
+    font-size: 16px;
+}
+.email{
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    --background: #dbdada;
+}
+.recuperar{
+    --border-radius: 30px;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: white; 
+    --background: linear-gradient(122deg, #00DBDE 0%, #FC00FF 100%);
+}

@@ -1,0 +1,199 @@
+<!--------------- HEADER --------------->
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-icon (click)="regresar()" size="large" name="chevron-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center title">Habitaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-----CONTENT QUE TIENE EL COLOR DE FONDO----->
+<ion-content class="fondo">
+  <!-----DIV QUE CONTIENE LA FECHA DE INICIO Y FECHA DE TERMINO SELECCIONADAS----->
+  <div>
+    <ion-card class="ion-text-center card">
+      <br>
+      <ion-label class="precio">Fechas Seleccionadas:</ion-label><br><br>
+      <ion-label class="fechaIni">{{fechaInicio}}</ion-label>
+      <ion-label class="precio">{{fechaTermino}}</ion-label> 
+      <br><br>
+    </ion-card>
+  </div>
+  <!-------------------------------------------->
+
+
+  <!----- CARD QUE CONTIENEN LA INFORMACION DE LA HABITACION PREMIUM ----->
+  <div>
+    <ion-card class="card" >
+      <!---------CARRUSEL DE FOTOS----------->
+      <ion-slides pager="true">
+        <ion-slide>
+          <img class="img" src="assets/img/premium2.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/premium1.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/minibar2.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/baño1.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/jacuzzi1.jpg" alt="habitacion">
+        </ion-slide>
+      </ion-slides>
+      <!-------------------------------------------->
+      <ion-text>
+        <ion-card-title class="ion-text-center titulo">{{habitacionPremium.nombre}}</ion-card-title>
+        <ion-label>{{habitacionPremium.detalles}}</ion-label>
+        <br>
+        <ion-label>{{habitacionPremium.detalles2}}</ion-label>
+        <br>
+        <ion-label>{{habitacionPremium.detalles3}}</ion-label>
+        <br>
+        <ion-label>{{habitacionPremium.detalles4}}</ion-label>
+        <br>
+        <ion-label>{{habitacionPremium.detalles5}}</ion-label>
+        <br>
+        <ion-label>Capacidad: {{habitacionPremium.capacidad}} personas.</ion-label>
+        <br><br>
+        <ion-label>
+          <ion-text class="precio">${{habitacionPremium.precio}}CLP/Noche</ion-text> 
+          <ion-button (click)="seleccionarHabPremium()" class="seleccionar" expand="slot">Seleccionar</ion-button>
+        </ion-label>
+        <br> 
+      </ion-text>
+      <br>
+    </ion-card> 
+  </div>
+  <!------------------------------------------------------------------------------------------------------------>
+
+
+
+  <!----- CARDS CONTIENEN LA INFORMACION DE LA HABITACION FAMILIAR ----->
+  <div>
+    <ion-card class="card" >
+      <!---------CARRUSEL DE FOTOS----------->
+      <ion-slides pager="true">
+        <ion-slide>
+          <img class="img" src="assets/img/familiar1.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/familiar2.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/familiar3.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/baño1.jpg" alt="habitacion">
+        </ion-slide>
+      </ion-slides>
+      <!-------------------------------------------->
+      <ion-text>
+        <ion-card-title class="ion-text-center titulo">{{habitacionFamiliar.nombre}}</ion-card-title>
+        <ion-label>{{habitacionFamiliar.detalles}}</ion-label>
+        <br>
+        <ion-label>{{habitacionFamiliar.detalles2}}</ion-label>
+        <br>
+        <ion-label>{{habitacionFamiliar.detalles3}}</ion-label>
+        <br>
+        <ion-label>Capacidad: {{habitacionFamiliar.capacidad}} personas</ion-label>
+        <br><br>
+        <ion-label>
+          <ion-text class="precio">${{habitacionFamiliar.precio}}CLP/Noche</ion-text> 
+          <ion-button (click)="seleccionarHabFamiliar()" class="seleccionar" expand="slot">Seleccionar</ion-button>
+        </ion-label>
+        <br> 
+      </ion-text>
+      <br>
+    </ion-card> 
+  </div>
+  <!----------------------------------------------------------------------------------------------->
+
+
+  <!----- CARD QUE CONTIENEN LA INFORMACION DE LA HABITACION CLASICA ----->
+  <div>
+    <ion-card class="card" >
+      <!---------CARRUSEL DE FOTOS----------->
+      <ion-slides  pager="true">
+        <ion-slide>
+          <img class="img" src="assets/img/clasica1.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img1" src="assets/img/clasica2.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img1" src="assets/img/clasica3.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/baño1.jpg" alt="habitacion">
+        </ion-slide>
+      </ion-slides>
+      <!-------------------------------------------->
+      <ion-text>
+        <ion-card-title class="ion-text-center titulo">{{habitacionClasica.nombre}}</ion-card-title>
+        <ion-label>{{habitacionClasica.detalles}}</ion-label>
+        <br>
+        <ion-label>{{habitacionClasica.detalles2}}</ion-label>
+        <br>
+        <ion-label>{{habitacionClasica.detalles3}}</ion-label>
+        <br>
+        <ion-label>Capacidad: {{habitacionClasica.capacidad}} personas.</ion-label>
+        <br><br>
+        <ion-label>
+          <ion-text class="precio">${{habitacionClasica.precio}}CLP/Noche</ion-text> 
+          <ion-button (click)="seleccionarHabClasica()" class="seleccionar" expand="slot">Seleccionar</ion-button>
+        </ion-label>
+        <br> 
+      </ion-text>
+      <br>
+    </ion-card> 
+  </div>
+  <!------------------------------------------------------------------------------------------------------------>
+  
+
+  
+
+
+  
+  <!----- CARD QUE CONTIENEN LA INFORMACION DE LA HABITACION INDIVIDUAL ----->
+  <div>
+    <ion-card class="card" >
+      <!---------CARRUSEL DE FOTOS----------->
+      <ion-slides pager="true">
+        <ion-slide>
+          <img class="img" src="assets/img/individual.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/individual2.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/individual4.jpg" alt="habitacion">
+        </ion-slide>
+        <ion-slide>
+          <img class="img" src="assets/img/baño1.jpg" alt="habitacion">
+        </ion-slide>
+      </ion-slides>
+      <!-------------------------------------------->
+      <ion-text>
+        <ion-card-title class="ion-text-center titulo">{{habitacionIndividual.nombre}}</ion-card-title>
+        <ion-label>{{habitacionIndividual.detalles}}</ion-label>
+        <br>
+        <ion-label>{{habitacionIndividual.detalles2}}</ion-label>
+        <br>
+        <ion-label>Capacidad: {{habitacionIndividual.capacidad}} personas.</ion-label>
+        <br><br>
+        <ion-label>
+          <ion-text class="precio">${{habitacionIndividual.precio}}CLP/Noche</ion-text> 
+          <ion-button (click)="seleccionarHabIndividual()" class="seleccionar" expand="slot">Seleccionar</ion-button>
+        </ion-label>
+        <br> 
+      </ion-text>
+      <br>
+    </ion-card> 
+  </div>
+  <!------------------------------------------------------------------------------------------------------------>
+
+</ion-content>

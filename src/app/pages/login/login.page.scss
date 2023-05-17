@@ -1,0 +1,66 @@
+//CARD QUE CONTIENE TODO LO DE LA PAGINA
+.card{
+    box-shadow: none;
+    --background: transparent;
+    color: #f1faee;
+}
+//LOGO DE LA EMPRESA
+.logo{
+    margin-top: 7%;
+    height: 100px;
+}
+//TITULO 1 DE LA PAGINA
+h3 {
+    color: #302e2e;
+    font-weight: 600;
+    margin-bottom: 1%;
+}
+.input{
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    --background: #dbdada;
+}
+//TEXTO DE OLVIDASTE LA CONTRASEÑA
+h4{
+    color: black;
+    text-decoration: underline;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+//BOTON DE INGRESAR
+.entrar{
+    --padding-start: 120px;
+    --padding-end: 120px;
+    --border-radius: 30px;
+    margin-bottom: 10px;
+    --background: linear-gradient(122deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+//BOTON DE INICIAR SESION CON GOOGLE
+.google{
+    --padding-start: 70px;
+    --padding-end: 70px;
+    --border-radius: 30px;
+    --background: linear-gradient(122deg, #00DBDE 0%, #FC00FF 100%);
+      
+}
+//ICONO DE GOOGLE QUE ESTA DENTRO DEL BOTON DE INICIAR SESION CON GOOGLE
+.icono{
+    padding-right: 5px;
+}
+//TEXTO DE "¿ERES NUEVO?, REGISTRATE"
+.footer-text{
+    color: black;
+    margin-top: 5%;
+}
+//TEXTO DONDE DICE "REGISTRATE"
+.t1{
+    color: black;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+

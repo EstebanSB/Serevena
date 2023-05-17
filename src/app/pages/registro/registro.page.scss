@@ -1,0 +1,36 @@
+
+.card{
+    box-shadow: none;
+    --background: transparent;
+}
+//TITULO 1 DE LA PAGINA
+h3 {
+    margin-bottom: 5px;
+    color: black;
+    font-weight: 600;
+}
+.input{
+    height: 62px;
+    border-radius: 30px;
+    margin-top: 8px;
+    --background: #dbdada;
+}
+
+.registrarse{
+    --padding-start: 120px;
+    --padding-end: 120px;
+    --border-radius: 30px;
+    margin-bottom: 10px;
+    --background: linear-gradient(122deg, #00DBDE 0%, #FC00FF 100%);
+}
+//TEXTO DE "¿ERES NUEVO?, REGISTRATE"
+.footer-text{
+    color: black;
+}
+//TEXTO DONDE DICE "REGISTRATE"
+.t1{
+    color: black;
+    font-weight: 600;
+    text-decoration: underline;
+}
+

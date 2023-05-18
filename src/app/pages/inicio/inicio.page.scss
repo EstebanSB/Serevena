@@ -48,10 +48,21 @@ ion-toolbar{
 .logo{
     margin-top: 15px;
     width: 180px;
-	margin-left: 30%;
+	//margin-left: 50%;
 /* 	fix the image within it's "frame" */
 	object-fit:cover;
 }
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
 //CARD QUE CONTIENE LOS CAMPOS DE FECHAS
 .card{
     box-shadow: none;
@@ -66,5 +77,11 @@ ion-toolbar{
 .habitaciones{
     --border-radius: 30px;
     --background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+@media (max-width: 321px) {
+    .title{
+        font-size: 19px;
+    }
 }
 

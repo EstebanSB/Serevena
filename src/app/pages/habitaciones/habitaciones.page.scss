@@ -52,8 +52,29 @@ ion-text ion-label{
 }
 //BOTON DE SELECCIONAR
 .seleccionar{
-    padding-left: 15%;
+    padding-left: 15px;
+    margin-bottom: 15px;
     --background: linear-gradient( 135deg, #FF6FD8 10%, #3813C2 100%);
 }
 
+@media (max-width: 769px) {
+    .seleccionar{
+        margin-left: 25px;
+    } 
+}
+
+@media (max-width: 376px) {
+    .seleccionar{
+        margin-left: 0px;
+    } 
+}
+
+@media (max-width: 320px) {
+    .seleccionar{
+        margin-top: 20px;
+        margin-left: 25%;
+    }
+
+    
+}
 

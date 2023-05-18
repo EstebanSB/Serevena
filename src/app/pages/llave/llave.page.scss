@@ -27,12 +27,24 @@
 .mostrarQr{
     margin-bottom: 10px;
     --border-radius: 30px;
-        /* From https://css.glass */
+    /* From https://css.glass */
     --background: rgba(255, 255, 255, 0.17);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.7px);
     -webkit-backdrop-filter: blur(7.7px);
     font-size: 16px;
+}
+
+@media (max-width: 320px) {
+    .title{
+        font-size: 20px;
+    }
+    .card1 .nombreHab {
+        font-size: 15px !important;
+    }
+    .card1 .mostrarQr{
+        font-size: 15px !important;
+    }
 }
 

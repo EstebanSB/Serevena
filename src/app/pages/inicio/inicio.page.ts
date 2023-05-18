@@ -100,7 +100,6 @@ export class InicioPage implements OnInit {
     console.log('test');
     console.log(this.formattedString2);
   }
-
   //FUNCION QUE CIERRA EL CAMPO DE FECHA
   Cancelar() {
     this.datetime.cancel(true);
@@ -134,17 +133,32 @@ export class InicioPage implements OnInit {
       console.log('los datos son ->', res.nombre)
     })
   }
-
+  //CIERRA LA SESION
   logout(){
     this.auth.logout();
     localStorage.clear();
     this.router.navigate(['/login']);
     this.interaction.presentToast('La sesión se ha cerrado')
   }
-
-  habitaciones(){
-    this.router.navigate(['/habitaciones'])
-    window.location.assign('/habitaciones');
+  //FUNCION QUE VALIDA LAS FECHAS NO ESTEN VACIAS
+  validateFields() {
+    if (!this.formattedString || !this.formattedString2) {
+      console.log('Debe ingresar ambas fechas');
+      return false; // Devuelve false si los campos están vacíos
+    } else {
+      console.log('Las fechas están completas');
+      return true; // Devuelve true si los campos están completos
+    }
   }
+  //VALIDA QUE LAS FECHAS DE LAS HABITACIONES NO ESTEN VACIAS
+  habitaciones() {
+    if (this.validateFields()) {
+      this.router.navigate(['/habitaciones']);
+      // No es necesario utilizar window.location.assign ya que navigate ya realiza la navegación
+    } else {
+      this.interaction.presentToast('Ingresa las Fechas');
+    }
+  }
+  
 
 }

@@ -10,12 +10,12 @@
 
 <ion-content>
   <!----- CARDS CONTIENEN LA INFORMACION DEL USUARIO LOGEADO PARA ACTUALIZAR SU INFORMACION ----->
-  <div *ngIf="userInfo">
+  <div class="card1" *ngIf="userInfo">
     <ion-card class="card">
       <br>
       <ion-item (click)="editarNombre()">
-        <ion-label>Nombre: {{userInfo.nombre}}</ion-label>
-        <ion-icon  slot="end" name="create"></ion-icon>
+        <ion-label class="label">Nombre: {{userInfo.nombre}}</ion-label>
+        <ion-icon class="ion-text-center" slot="end" name="create"></ion-icon>
       </ion-item>
       <br>
       <ion-item (click)="editarApellido()">

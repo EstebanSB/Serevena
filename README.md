@@ -4,6 +4,8 @@ Desarrollado en Ionic junto al framework Angular y Firebase para el almacenamien
 Dejo fotos del proyecto:
 
 LOGIN
-<img src="https://i.postimg.cc/637Q3Dyf/1-Login.jpg" alt="LOGIN" width="300" height="200">
+
+
+<img src="https://i.postimg.cc/637Q3Dyf/1-Login.jpg" alt="LOGIN" width="300" height="300">
 
 

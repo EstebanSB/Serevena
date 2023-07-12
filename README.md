@@ -70,3 +70,8 @@ Historial de las habitaciones reservadas.
 
 
 <img src="https://i.postimg.cc/7LRxpmmG/10-Historial.jpg" alt="HISTORIAL" width="300" height="500">
+
+
+Si deseas probar la App aquí te dejo el link de descarga (Android)
+
+https://drive.google.com/file/d/1deit_jpr_ln69WNjL2NT2wyoZfQccSCg/view?usp=drivesdk
